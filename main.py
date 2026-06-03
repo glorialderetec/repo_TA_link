@@ -3,6 +3,8 @@ from src.datos import (cargar_dataset, validar_dataset)
 from src.interfaz import(mostrar_menu, pedir_opcion)
 from src.perfiles import Cliente
 from src.metricas import obtener_estadisticas_generales
+from tabulate import tabulate
+
 try:
     df = cargar_dataset()
     df_valido = validar_dataset(df)
@@ -69,7 +71,8 @@ while True:
 
         df_metricas = obtener_estadisticas_generales(df_valido)
         
-        df_metricas.head()
+        print("\nESTADÍSTICAS GENERALES")
+        print(tabulate(df_metricas, headers='keys', tablefmt='grid', showindex=False))
 
     elif opcion == 3:
 
@@ -87,4 +90,9 @@ while True:
 
         print("Programa finalizado.")
         break
+    
+    continuar = input("\n¿Desea realizar otra operación? (s/n): ").lower()
 
+    if continuar != "s":
+        print("Programa finalizado.")
+        break
