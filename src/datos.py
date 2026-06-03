@@ -66,3 +66,14 @@ def validar_dataset(df):
             
         except ValueError:
             raise ValueError(f'Error: la columna {columna} contiene valores no numericos')
+    
+    num_filas_originales = len(df)
+    
+    df = df.dropna()
+    
+    filas_eliminadas = num_filas_originales - len(df)
+    
+    if filas_eliminadas > 0:
+        print(f'Se eliminaron {filas_eliminadas} filas con datos faltantes')
+    
+    return df
