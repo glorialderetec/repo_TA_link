@@ -1,12 +1,12 @@
 def mostrar_menu():
   '''
-    Función que muestra el menu de opcionesal usuario
+    Función que muestra el menu de opciones al usuario
     Parameters
     None
     Returns
     None
     '''
-  print("1.⁠ ⁠Consultar perfil de cliente\n2.⁠ ⁠Mostrar estadísticas generales\n3.⁠ ⁠Comparar segmentos\n4.⁠ ⁠Mostrar gráficos\n5.⁠ ⁠Generar recomendaciones\n6.⁠ ⁠Salir\n")
+  print("MENU DE OPCIONES:\n1.⁠ ⁠Consultar perfil de cliente\n2.⁠ ⁠Mostrar estadísticas generales\n3.⁠ ⁠Comparar segmentos\n4.⁠ ⁠Mostrar gráficos\n5.⁠ ⁠Generar recomendaciones\n6.⁠ ⁠Salir\n")
   
 def pedir_opcion():
     '''
