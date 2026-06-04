@@ -60,8 +60,8 @@ while True:
             fila["id"].iloc[0],
             fila["age"].iloc[0],
             fila["income"].iloc[0],
+            fila["purchase_frequency"].iloc[0],
             fila["purchase_amount"].iloc[0],
-            fila["promotion_usage"].iloc[0],
             fila["satisfaction_score"].iloc[0]
         )
 
