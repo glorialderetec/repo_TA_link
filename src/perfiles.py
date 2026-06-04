@@ -1,22 +1,11 @@
-def crear_cliente_id(df,id_cliente):
-    fila = df_valido[df_valido["id"] == id_cliente]
-
-    cliente = Cliente(
-        fila["id"].iloc[0],
-        fila["age"].iloc[0],
-        fila["income"].iloc[0],
-        fila["purchase_frequency"].iloc[0],
-        fila["purchase_amount"].iloc[0],
-        fila["satisfaction_score"].iloc[0])
-    return cliente
-    
 class Cliente:
     '''
     Objeto que representa un cliente de la empresa.
     '''
     def __init__(self, identificator, age, income, purchase_frequency, purchase_amount, satisfaction_score):
         '''
-
+        Se inicaliza el objeto. 
+        
         Parametros
         ----------
         identificator : int
@@ -144,3 +133,31 @@ class Cliente:
 
     def mostrar_resultado(self):
         print(f"El cliente {self.id} pertenece a la categoria {self.clasificar_perfil()}. Recomendacion para el cliente: {self.generar_recomendacion()}")
+    
+    def crear_cliente_id(df, id_cliente):
+        '''
+        Crea un objeto Cliente a partir de un ID buscado en un DataFrame.
+
+        Parametros
+        ----------
+        df : DataFrame 
+            Un DataFrame con los datos de clientes.
+        id_cliente : int
+            ID del cliente a buscar.
+
+        Returns
+        -------
+        cliente: Cliente
+            Objeto cliente corresponditene al ID.
+
+        '''      
+        fila = df[df["id"] == id_cliente]
+        
+        cliente = Cliente(
+            fila["id"].iloc[0],
+            fila["age"].iloc[0],
+            fila["income"].iloc[0],
+            fila["purchase_frequency"].iloc[0],
+            fila["purchase_amount"].iloc[0],
+            fila["satisfaction_score"].iloc[0])
+        return cliente
