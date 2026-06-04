@@ -49,33 +49,7 @@ rich
 
 #### Configuración inicial
 
-
-
-##### 1\. Configurar la ruta del proyecto
-
-
-
-Antes de ejecutar el programa, modificar la variable 'ruta_proyecto' dentro de la función 'cargar_dataset()' ubicada en 'src/datos.py'.
-
-
-
-Ejemplo:
-
-
-
-
-
-ruta\_proyecto = "C:\\\\Users\\\\NombreUsuario\\\\Documents\\\\GitHub\\\\repo\_TA\\\\"
-
-
-
-
-
-La ruta debe coincidir con la ubicación del repositorio en la computadora donde se ejecutará el programa.
-
-
-
-##### 2\. Configurar la API Key
+##### Configurar la API Key
 
 
 
