@@ -4,7 +4,7 @@ from src.interfaz import(mostrar_menu, pedir_opcion, pedir_id_cliente)
 from src.perfiles import crear_cliente_id
 from src.metricas import obtener_estadisticas_generales
 from src.graficos import mostrar_menu_graficos
-from tabulate import tabulate
+#from tabulate import tabulate
 
 try:
     df = cargar_dataset()
