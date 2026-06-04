@@ -3,6 +3,7 @@ from src.datos import (cargar_dataset, validar_dataset)
 from src.interfaz import(mostrar_menu, pedir_opcion)
 from src.interfaz import pedir_id_cliente
 from src.perfiles import Cliente
+from src.perfiles import crear_cliente_id
 from src.metricas import obtener_estadisticas_generales
 from src.graficos import mostrar_menu_graficos
 from tabulate import tabulate
@@ -25,16 +26,7 @@ while True:
 
         id_cliente = pedir_id_cliente(df_valido)
 
-        fila = df_valido[df_valido["id"] == id_cliente]
-
-        cliente = Cliente(
-            fila["id"].iloc[0],
-            fila["age"].iloc[0],
-            fila["income"].iloc[0],
-            fila["purchase_frequency"].iloc[0],
-            fila["purchase_amount"].iloc[0],
-            fila["satisfaction_score"].iloc[0]
-        )
+        cliente= crear_cliente_id(df_valido, id_cliente)
 
         print("\nPerfil del cliente:")
         print(cliente.clasificar_perfil())
@@ -55,6 +47,9 @@ while True:
         mostrar_menu_graficos(df_valido)
 
     elif opcion == 5:
+        id_cliente = pedir_id_cliente(df_valido)
+
+        cliente= crear_cliente_id(df_valido, id_cliente)
 
         print("Generando recomendaciones...")
 
