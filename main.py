@@ -1,8 +1,6 @@
 # MAIN
 from src.datos import (cargar_dataset, validar_dataset)
-from src.interfaz import(mostrar_menu, pedir_opcion)
-from src.interfaz import pedir_id_cliente
-from src.perfiles import Cliente
+from src.interfaz import(mostrar_menu, pedir_opcion, pedir_id_cliente)
 from src.perfiles import crear_cliente_id
 from src.metricas import obtener_estadisticas_generales
 from src.graficos import mostrar_menu_graficos
@@ -35,8 +33,22 @@ while True:
 
         df_metricas = obtener_estadisticas_generales(df_valido)
         
-        print("\nESTADÍSTICAS GENERALES")
-        print(tabulate(df_metricas, headers='keys', tablefmt='grid', showindex=False))
+        #print("\nESTADÍSTICAS GENERALES")
+        #print(tabulate(df_metricas, headers='keys', tablefmt='grid', showindex=False))
+        from rich.console import Console
+        from rich.table import Table
+        
+        console = Console()
+        
+        tabla = Table(title="\nEstadísticas Generales")
+        
+        tabla.add_column("Métrica")
+        tabla.add_column("Valor")
+        
+        for columna in df_metricas.columns:
+            tabla.add_row(columna,str(df_metricas[columna][0]))
+        
+        console.print(tabla)
 
     elif opcion == 3:
 
