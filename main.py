@@ -1,6 +1,7 @@
 # MAIN
 from src.datos import (cargar_dataset, validar_dataset)
 from src.interfaz import(mostrar_menu, pedir_opcion)
+from src.interfaz import pedir_id_cliente
 from src.perfiles import Cliente
 from src.metricas import obtener_estadisticas_generales
 from src.graficos import mostrar_menu_graficos
@@ -15,36 +16,6 @@ except Exception as e:
     
     quit() #SUPER A CHEQUEAR
 
-def pedir_id_cliente(df):
-    '''
-    funcion que pide un id de cliente y lo valida
-
-    Parameters
-    ----------
-    df : DataFrame
-        DataFrame con los datos del dataset ya validados.
-
-    Returns
-    -------
-    id_cliente : int
-        el id del cliente pedido ya validado.
-
-    '''
-
-    while True:
-
-        try:
-
-            id_cliente = int(input("Ingrese ID del cliente: "))
-
-            if id_cliente in df["id"].values:
-                return id_cliente
-
-            print("Error: no existe un cliente con ese ID")
-
-        except ValueError:
-
-            print("Error: debe ingresar un número")
 
 while True:
     mostrar_menu()
