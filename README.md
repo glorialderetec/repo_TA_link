@@ -1,1 +1,1 @@
-NO es Tca es TA 🫶
+NO OLVIDAR DE ENVIAR LA API KEY POR SEPARADO EN LA NETREGA DEL TRABAJO Y DAR LAS INSTRUCCIONES (Pegar la APIKEY en el archivo recomendaciones_api.py donde lo pide)
