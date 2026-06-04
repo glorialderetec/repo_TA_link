@@ -1,4 +1,15 @@
+def crear_cliente_id(df,id_cliente):
+    fila = df_valido[df_valido["id"] == id_cliente]
 
+    cliente = Cliente(
+        fila["id"].iloc[0],
+        fila["age"].iloc[0],
+        fila["income"].iloc[0],
+        fila["purchase_frequency"].iloc[0],
+        fila["purchase_amount"].iloc[0],
+        fila["satisfaction_score"].iloc[0])
+    return cliente
+    
 class Cliente:
     '''
     Objeto que representa un cliente de la empresa.
