@@ -86,7 +86,7 @@ class Cliente:
         return score
 
 #Clasifica al cliente segun su score 
-    def clasificar_perfil(self, cliente):
+    def clasificar_perfil(self):
         '''
         Determina la categoría del cliente según su score.
 
