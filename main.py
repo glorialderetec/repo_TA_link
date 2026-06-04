@@ -3,6 +3,7 @@ from src.datos import (cargar_dataset, validar_dataset)
 from src.interfaz import(mostrar_menu, pedir_opcion)
 from src.perfiles import Cliente
 from src.metricas import obtener_estadisticas_generales
+from src.graficos import mostrar_menu_graficos
 from tabulate import tabulate
 
 try:
@@ -80,7 +81,7 @@ while True:
 
     elif opcion == 4:
 
-        print("Mostrando gráficos...")
+        mostrar_menu_graficos(df_valido)
 
     elif opcion == 5:
 
