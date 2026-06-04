@@ -98,7 +98,7 @@ class Cliente:
 
         '''
 
-        score = self.obtener_score
+        score = self.obtener_score()
 
         if score >= self.limite_premium:
             return "Premium"
