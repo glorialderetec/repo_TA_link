@@ -1,4 +1,4 @@
-def comparar_clientes(df, opcion):
+def comparar_clientes(df):
     '''
     Compara grupos de clientes según el criterio seleccionado.
 
@@ -8,17 +8,6 @@ def comparar_clientes(df, opcion):
 
         DataFrame validado con los datos de clientes.
 
-    opcion : str
-
-        Tipo de comparación a realizar.
-
-        Opciones disponibles:
-
-        - "region"
-        - "fidelizacion_compra"
-        - "fidelizacion_satisfaccion"
-        - "promociones"
-
     Returns
     -------
     analisis : DataFrame
@@ -27,7 +16,13 @@ def comparar_clientes(df, opcion):
         seleccionada.
     '''
 
-    opcion = opcion.lower().strip()
+    print("\nOpciones de comparación:")
+    print("1. Compra promedio según región")
+    print("2. Compra promedio según fidelización")
+    print("3. Satisfacción promedio según fidelización")
+    print("4. Compra promedio según uso de promociones")
+
+    opcion = input("\nIngrese una opción: ").lower().strip()
 
     opciones_validas = [
         "region",
