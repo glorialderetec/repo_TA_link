@@ -1,5 +1,4 @@
 # DATOS
-import os
 import pandas as pd
 
 def cargar_dataset():
@@ -13,8 +12,6 @@ def cargar_dataset():
 
     '''
     try:
-        ruta_proyecto = "C:\\Users\\Usuario\\Documents\\GitHub\\repo_TA\\"
-        os.chdir(ruta_proyecto)
         
         df = pd.read_csv('data\\customer_data.csv')
         
