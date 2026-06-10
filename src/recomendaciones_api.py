@@ -1,6 +1,6 @@
 from google import genai
 
-API_KEY = "PEGAR_ACA_LA_API_KEY" #se la mandamos aparte en la entrega del trabajo
+API_KEY = "PEGAR ACA LA API KEY" #se la mandamos aparte en la entrega del trabajo
 
 client = genai.Client(api_key=API_KEY)
 
