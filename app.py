@@ -58,13 +58,13 @@ if opcion == "Perfil de cliente":
     st.write("### Datos del cliente")
 
     st.write({
-        "ID": cliente.id,
-        "Edad": cliente.age,
-        "Ingreso": cliente.income,
-        "Frecuencia": cliente.purchase_frequency,
-        "Monto compra": cliente.purchase_amount,
-        "Satisfacción": cliente.satisfaction_score
-    })
+    "ID": int(cliente.id),
+    "Edad": int(cliente.age),
+    "Ingreso": int(cliente.income),
+    "Frecuencia": cliente.purchase_frequency,
+    "Monto compra": int(cliente.purchase_amount),
+    "Satisfacción": int(cliente.satisfaction_score)
+})
 
 # -------------------
 # ESTADISTICAS
