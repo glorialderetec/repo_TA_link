@@ -28,6 +28,10 @@ pip install -r requirements.txt
 
 
 
+En la línea 16 del archivo datos.py se encuentra la ubicación del archivo csv, si el programa se corre desde Windows se debe corroborar que esta escrita con \\\\, en cambio, en Mac debería tener /
+
+
+
 
 
 #### Dependencias
@@ -35,6 +39,7 @@ pip install -r requirements.txt
 
 
 El archivo *requirements.txt* contiene las siguientes librerías:
+
 
 
 pandas
@@ -60,5 +65,4 @@ En el archivo correspondiente a las recomendaciones mediante IA, reemplazar:
 
 
 API\_KEY = "PEGAR\_ACA\_LA\_API\_KEY"
-
 
