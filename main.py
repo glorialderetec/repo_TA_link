@@ -6,6 +6,8 @@ from src.metricas import obtener_estadisticas_generales
 from src.graficos import mostrar_menu_graficos
 from src.segmentos import segmentos
 from src.recomendaciones_api import generar_recomendacion_api
+from rich.console import Console
+from rich.table import Table
 #from tabulate import tabulate
 
 try:
@@ -15,7 +17,7 @@ try:
 except Exception as e:
     print(e)
     
-    quit() #SUPER A CHEQUEAR
+    quit() 
 
 
 while True:
@@ -37,8 +39,6 @@ while True:
         
         #print("\nESTADÍSTICAS GENERALES")
         #print(tabulate(df_metricas, headers='keys', tablefmt='grid', showindex=False))
-        from rich.console import Console
-        from rich.table import Table
         
         console = Console()
         
@@ -56,7 +56,21 @@ while True:
 
         print("Comparando segmentos...")
         analisis = segmentos(df)
-        print(analisis)
+       
+        console = Console()
+
+        def mostrar_dataframe(df, titulo="Tabla"):
+            tabla = Table(title=titulo)
+
+            for columna in df.columns:
+                tabla.add_column(str(columna))
+
+            for _, fila in df.iterrows():
+                tabla.add_row(*[str(valor) for valor in fila])
+
+            console.print(tabla)
+            
+        mostrar_dataframe(analisis.reset_index(),"\nComparación de segmentos")
 
     elif opcion == 4:
 
