@@ -24,7 +24,7 @@ def segmentos(df):
     
     while True: 
         opcion = input("\nIngrese una opción: ").lower().strip()
-        if opcion not in [1, 2, 3, 4]:
+        if opcion not in ["1", "2", "3", "4"]:
             raise ValueError("Opción de comparación inválida.")
         else:
             break
