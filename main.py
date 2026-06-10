@@ -54,7 +54,8 @@ while True:
     elif opcion == 3:
 
         print("Comparando segmentos...")
-        segmentos(df)
+        analisis = segmentos(df)
+        print(analisis)
 
     elif opcion == 4:
 
