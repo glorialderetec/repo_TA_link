@@ -8,6 +8,7 @@ from src.segmentos import segmentos
 from src.recomendaciones_api import generar_recomendacion_api
 from rich.console import Console
 from rich.table import Table
+import webbrowser
 #from tabulate import tabulate
 
 try:
@@ -85,8 +86,8 @@ while True:
         reco = generar_recomendacion_api(cliente)
         print(reco)
     elif opcion==6:
-        link= "http://localhost:8501"
-        print("Link para ingresar a la interfaz: " )
+        link= webbrowser.open("http://localhost:8501")
+        print("\nLink para ingresar a la interfaz: \n ")
         print(link)
     
     elif opcion == 7:
