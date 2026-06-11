@@ -85,10 +85,11 @@ while True:
         reco = generar_recomendacion_api(cliente)
         print(reco)
     elif opcion==6:
-        ##ver interfaz
+        link= "http://localhost:8501"
+        print(link)
     
     elif opcion == 7:
-
+        
         print("Programa finalizado.")
         break
     
