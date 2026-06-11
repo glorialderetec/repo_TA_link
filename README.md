@@ -1,4 +1,4 @@
-NO OLVIDAR DE ENVIAR LA API KEY POR SEPARADO EN LA NETREGA DEL TRABAJO Y DAR LAS INSTRUCCIONES (Pegar la APIKEY en el archivo recomendaciones\_api.py donde lo pide)
+NO OLVIDAR DE ENVIAR LA API KEY POR SEPARADO EN LA ENTREGA DEL TRABAJO Y DAR LAS INSTRUCCIONES (Pegar la APIKEY en el archivo recomendaciones\_api.py donde lo pide)
 
 
 
@@ -14,13 +14,19 @@ Este proyecto permite analizar el comportamiento de compra de clientes a partir 
 
 
 
+La función de heatmap devuelve un documento HTML que se almacena en la carpeta del repositorio. 
+
+
+
+EL RESTO DEL DISEÑO DEL TRABAJO APLICADO SE ENCUENTRA EN EL DOCUMENTO "DISEÑO\_PROYECTO" ENL A CARPETA DE DOCS.
+
+
+
 #### Requisitos
 
 
 
-Instalar las dependencias del proyecto:
-
-
+* Instalar las dependencias del proyecto:
 
 
 
@@ -28,7 +34,9 @@ pip install -r requirements.txt
 
 
 
-En la línea 16 del archivo datos.py se encuentra la ubicación del archivo csv, si el programa se corre desde Windows se debe corroborar que esta escrita con \\\\, en cambio, en Mac debería tener /
+
+
+* En la línea 16 del archivo datos.py se encuentra la ubicación del archivo csv, si el programa se corre desde Windows se debe corroborar que esta escrita con \\\\, en cambio, en Mac debería tener /
 
 
 
@@ -46,6 +54,10 @@ pandas
 
 matplotlib
 
+seaborn
+
+folium
+
 google-genai
 
 rich
@@ -58,11 +70,15 @@ rich
 
 
 
-En el archivo correspondiente a las recomendaciones mediante IA, reemplazar:
+En el archivo "recomendaciones\_api.py", reemplazar:
 
 
 
 
 
 API\_KEY = "PEGAR\_ACA\_LA\_API\_KEY"
+
+
+
+por la api key que se les envía por mail
 
