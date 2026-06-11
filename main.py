@@ -4,11 +4,11 @@ from src.interfaz import(mostrar_menu, pedir_opcion, pedir_id_cliente)
 from src.perfiles import crear_cliente_id
 from src.metricas import obtener_estadisticas_generales
 from src.graficos import mostrar_menu_graficos
-from src.segmentos import segmentos
+from src.segmentos import (segmentos, mostrar_dataframe)
 from src.recomendaciones_api import generar_recomendacion_api
 from rich.console import Console
 from rich.table import Table
-from src.mapa import generar_mapa_regiones
+from src.mapas import generar_mapa_regiones
 import webbrowser
 #from tabulate import tabulate
 
@@ -58,19 +58,6 @@ while True:
 
         print("Comparando segmentos...")
         analisis = segmentos(df)
-       
-        console = Console()
-
-        def mostrar_dataframe(df, titulo="Tabla"):
-            tabla = Table(title=titulo)
-
-            for columna in df.columns:
-                tabla.add_column(str(columna))
-
-            for _, fila in df.iterrows():
-                tabla.add_row(*[str(valor) for valor in fila])
-
-            console.print(tabla)
             
         mostrar_dataframe(analisis.reset_index(),"\nComparación de segmentos")
 

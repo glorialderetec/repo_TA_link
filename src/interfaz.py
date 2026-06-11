@@ -6,7 +6,7 @@ def mostrar_menu():
     Returns
     None
     '''
-  print("MENU DE OPCIONES:\n1.⁠ ⁠Consultar perfil de cliente\n2.⁠ ⁠Mostrar estadísticas generales\n3.⁠ ⁠Comparar segmentos\n4.⁠ ⁠Mostrar gráficos\n5.⁠ ⁠Generar recomendaciones.\n6.⁠ ⁠Visualizar en la interfaz\n7.  Generar mapa geográdico\n8⁠ ⁠Salir\n")
+  print("MENU DE OPCIONES:\n1.⁠ ⁠Consultar perfil de cliente\n2.⁠ ⁠Mostrar estadísticas generales\n3.⁠ ⁠Comparar segmentos\n4.⁠ ⁠Mostrar gráficos\n5.⁠ ⁠Generar recomendaciones.\n6.⁠ ⁠Visualizar en la interfaz\n7. Generar mapa geográfico\n8⁠ ⁠Salir\n")
   
 def pedir_opcion():
     '''
@@ -56,7 +56,7 @@ def pedir_id_cliente(df):
 
         try:
 
-            id_cliente = int(input("Ingrese ID del cliente: "))
+            id_cliente = int(input("Ingrese ID del cliente (n° del 1 al 100.000): "))
 
             if id_cliente in df["id"].values:
                 return id_cliente

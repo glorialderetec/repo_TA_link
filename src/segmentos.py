@@ -1,3 +1,6 @@
+from rich.console import Console
+from rich.table import Table
+
 def segmentos(df):
     '''
     Compara grupos de clientes según el criterio seleccionado.
@@ -90,3 +93,15 @@ def segmentos(df):
         )
 
     return analisis
+
+def mostrar_dataframe(df, titulo="Tabla"):
+    tabla = Table(title=titulo)
+    console = Console()
+    
+    for columna in df.columns:
+        tabla.add_column(str(columna))
+
+    for _, fila in df.iterrows():
+        tabla.add_row(*[str(valor) for valor in fila])
+
+    console.print(tabla)
