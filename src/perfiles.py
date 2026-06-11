@@ -132,7 +132,7 @@ class Cliente:
             return "Aplicar campaña de fidelización"
 
     def mostrar_resultado(self):
-        return(f"El cliente {self.id} pertenece a la categoria {self.clasificar_perfil()}. Recomendacion para el cliente: {self.generar_recomendacion()}")
+        return(f"El cliente {self.id} pertenece a la categoria {self.clasificar_perfil()}. Su Score es {self.obtener_score()}.\nRecomendacion para el cliente: {self.generar_recomendacion()}")
     
 def crear_cliente_id(df, id_cliente):
     '''
