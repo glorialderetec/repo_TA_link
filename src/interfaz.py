@@ -6,7 +6,7 @@ def mostrar_menu():
     Returns
     None
     '''
-  print("MENU DE OPCIONES:\n1.⁠ ⁠Consultar perfil de cliente\n2.⁠ ⁠Mostrar estadísticas generales\n3.⁠ ⁠Comparar segmentos\n4.⁠ ⁠Mostrar gráficos\n5.⁠ ⁠Generar recomendaciones.\n6Visualizar en la interfaz.\n7.⁠ ⁠Salir\n")
+  print("MENU DE OPCIONES:\n1.⁠ ⁠Consultar perfil de cliente\n2.⁠ ⁠Mostrar estadísticas generales\n3.⁠ ⁠Comparar segmentos\n4.⁠ ⁠Mostrar gráficos\n5.⁠ ⁠Generar recomendaciones.\n6 Visualizar en la interfaz.\n7.⁠ ⁠Salir\n")
   
 def pedir_opcion():
     '''
