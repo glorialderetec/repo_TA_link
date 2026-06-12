@@ -6,7 +6,17 @@ NO OLVIDAR DE ENVIAR LA API KEY POR SEPARADO EN LA ENTREGA DEL TRABAJO Y DAR LAS
 
 
 
-#### Descripción
+Integrantes:
+
+* Gloria Alderete Cornejo
+* Juana Bibiloni
+* Maria Primbas
+* Emma Pyfrom
+* Belén Zarich
+
+
+
+#### Descripción 
 
 
 
@@ -14,11 +24,15 @@ Este proyecto permite analizar el comportamiento de compra de clientes a partir 
 
 
 
-La función de heatmap devuelve un documento HTML que se almacena en la carpeta del repositorio. 
+La función de heatmap devuelve un documento HTML que se almacena en la carpeta del repositorio.
 
 
 
 EL RESTO DEL DISEÑO DEL TRABAJO APLICADO SE ENCUENTRA EN EL DOCUMENTO "diseño" EN LA CARPETA "docs".
+
+
+
+LOS DIAGRAMAS DEL DISEÑO DEL TRABAJO APLICADO SE ENCUENTRAN EN LA CARPETA "diagramas".
 
 
 
@@ -71,8 +85,6 @@ rich
 
 
 En el archivo "recomendaciones\_api.py", reemplazar:
-
-
 
 
 
