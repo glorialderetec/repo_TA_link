@@ -1,5 +1,6 @@
 import folium
 from folium.plugins import HeatMap
+import webbrowser
 
 def generar_mapa_regiones(df):
     '''
@@ -20,12 +21,6 @@ def generar_mapa_regiones(df):
         DataFrame validado con los datos de los clientes. Debe contener,
         como mínimo, la columna "region" con valores pertenecientes a las
         categorías "North", "South", "East" y "West".
-
-    Raises
-    ------
-    KeyError
-        Si la columna "region" no existe en el DataFrame o contiene
-        regiones sin coordenadas asociadas.
 
     Returns
     -------
@@ -85,6 +80,8 @@ def generar_mapa_regiones(df):
     
     #Guardar el mapa
     mapa.save("mapa_clientes.html")
+    
+    webbrowser.open("mapa_clientes.html")
 
     print("Mapa generado correctamente.")
     
