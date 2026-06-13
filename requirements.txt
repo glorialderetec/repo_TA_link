@@ -4,5 +4,4 @@ matplotlib
 seaborn
 folium
 rich
-webbrowser
 streamlit
