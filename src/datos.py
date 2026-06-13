@@ -13,7 +13,7 @@ def cargar_dataset():
     '''
     try:
         
-        df = pd.read_csv('data\\customer_data.csv')
+        df = pd.read_csv('data/customer_data.csv')
         
         return df
     
