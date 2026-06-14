@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from graficos import (
+from src.graficos import (
     grafico_compra_por_fidelizacion,
     grafico_clientes_por_region
 )
