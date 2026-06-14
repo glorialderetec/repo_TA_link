@@ -5,7 +5,8 @@ import seaborn as sns
 
 from src.graficos import (
     grafico_ingreso_vs_compra,
-    grafico_distribucion_perfiles
+    grafico_distribucion_perfiles,
+    mostrar_menu_graficos
 )
 
 # Config
@@ -19,7 +20,7 @@ df = pd.read_csv("data/customer_data.csv")
 # Sidebar menú
 opcion = st.sidebar.selectbox(
     "Menú",
-    ["Inicio", "Gráficos"]
+    ["Inicio", "Perfil de cliente", "Estadísticas generales","Comparación de Segmentos","Gráficos"]
 )
 
 
