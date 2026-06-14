@@ -31,17 +31,7 @@ if opcion == "Inicio":
     st.write("Sistema de análisis de clientes con visualizaciones interactivas.")
 
     st.dataframe(df)
-# -------------------
-# CARGA DATOS
-# -------------------
 
-try:
-    df = cargar_dataset()
-    df = validar_dataset(df)
-
-except Exception as e:
-    st.error(str(e))
-    st.stop()
 
 # -------------------
 # MENU
