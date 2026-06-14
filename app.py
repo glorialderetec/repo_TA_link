@@ -3,17 +3,33 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from src.datos import cargar_dataset, validar_dataset
-from src.metricas import obtener_estadisticas_generales
-from src.perfiles import crear_cliente_id, Cliente
-
-st.set_page_config(
-    page_title="PulseLab Analytics",
-    layout="wide"
+from graficos import (
+    grafico_compra_por_fidelizacion,
+    grafico_clientes_por_region
 )
+
+# Config
+st.set_page_config(page_title="Sistema de Clientes", layout="wide")
 
 st.title("📊 Sistema de Análisis y Perfilado de Clientes")
 
+# Cargar datos
+df = pd.read_csv("data/customer_data.csv")
+
+# Sidebar menú
+opcion = st.sidebar.selectbox(
+    "Menú",
+    ["Inicio", "Gráficos"]
+)
+
+
+# INICIO
+# -------------------------
+if opcion == "Inicio":
+    st.subheader("Bienvenido 👋")
+    st.write("Sistema de análisis de clientes con visualizaciones interactivas.")
+
+    st.dataframe(df)
 # -------------------
 # CARGA DATOS
 # -------------------
@@ -145,7 +161,26 @@ elif opcion == "Comparar segmentos":
     st.dataframe(analisis)
 
     st.bar_chart(analisis.iloc[:,0])
+-------------------
+# -------------------------
+# GRÁFICOS
+# -------------------------
+elif opcion == "Gráficos":
 
-# -------------------
-# GRAFICOS
-# -------------------
+    st.header("📈 Visualizaciones")
+
+    grafico = st.selectbox(
+        "Seleccione un gráfico",
+        [
+            "Compra promedio por fidelización",
+            "Distribución de clientes por región"
+        ]
+    )
+
+    if grafico == "Compra promedio por fidelización":
+        fig = grafico_compra_por_fidelizacion(df)
+        st.pyplot(fig)
+
+    elif grafico == "Distribución de clientes por región":
+        fig = grafico_clientes_por_region(df)
+        st.pyplot(fig)
