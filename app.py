@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 from src.datos import cargar_dataset, validar_dataset
 from src.metricas import obtener_estadisticas_generales
@@ -147,31 +149,3 @@ elif opcion == "Comparar segmentos":
 # -------------------
 # GRAFICOS
 # -------------------
-
-elif opcion == "Gráficos":
-
-    st.header("Visualizaciones")
-
-    grafico = st.selectbox(
-        "Seleccione gráfico",
-        [
-            "Compra promedio por fidelización",
-            "Distribución de clientes por región"
-        ]
-    )
-
-    if grafico == "Compra promedio por fidelización":
-
-        datos = (
-            df.groupby("loyalty_status")
-            ["purchase_amount"]
-            .mean()
-        )
-
-        st.bar_chart(datos)
-
-    else:
-
-        datos = df["region"].value_counts()
-
-        st.bar_chart(datos)
