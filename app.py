@@ -4,8 +4,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 from src.graficos import (
-    grafico_compra_por_fidelizacion,
-    grafico_clientes_por_region
+    grafico_ingreso_vs_compra,
+    grafico_distribucion_perfiles
 )
 
 # Config
