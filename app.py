@@ -161,7 +161,7 @@ elif opcion == "Comparar segmentos":
     st.dataframe(analisis)
 
     st.bar_chart(analisis.iloc[:,0])
--------------------
+
 # -------------------------
 # GRÁFICOS
 # -------------------------
